@@ -1,5 +1,7 @@
+import { PrimaryLayout } from './components/layouts/PrimaryLayout';
+
 function App() {
-  return <div>Hello world</div>;
+  return <PrimaryLayout>App Content</PrimaryLayout>;
 }
 
 export default App;
