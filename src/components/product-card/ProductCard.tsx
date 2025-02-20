@@ -6,10 +6,7 @@ import { ListGenerator } from '@/utils/helper';
 
 import styles from './ProductCard.module.css';
 
-type ProductCardProps = Pick<
-  Product,
-  'name' | 'image' | 'category' | 'description' | 'unitaryPrice' | 'createdAt'
->;
+type ProductCardProps = Pick<Product, 'name' | 'image' | 'description' | 'unitaryPrice'>;
 
 export function ProductCard({ name, description, image, unitaryPrice }: ProductCardProps) {
   return (
@@ -21,7 +18,7 @@ export function ProductCard({ name, description, image, unitaryPrice }: ProductC
         <h3 className={cn(styles.productTitle, 'line-clamp line-clamp-1')}>{name}</h3>
         <span className={styles.productPrice}>{unitaryPrice}</span>
       </div>
-      <p className={cn(styles.productDescription, 'line-clamp line-clamp-3')}>{description}</p>
+      <p className={cn(styles.productDescription, 'line-clamp line-clamp-2')}>{description}</p>
       <div className={styles.productRating}>
         <ListGenerator
           items={new Array(5).fill(null)}

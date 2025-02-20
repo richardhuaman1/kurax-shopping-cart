@@ -4,6 +4,7 @@ import { PublicImages } from '@/utils/media-library';
 
 export const ProductData: Product[] = [
   {
+    id: 1,
     name: 'iPhone X 128GB',
     description: 'Apple iPhone X with 5.8-inch Super Retina display and Face ID.',
     unitaryPrice: 499.99,
@@ -12,6 +13,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.SMARTPHONES,
   },
   {
+    id: 2,
     name: 'PlayStation 5',
     description: 'Sony PS5 with ultra-fast SSD and ray tracing support.',
     unitaryPrice: 499.99,
@@ -20,6 +22,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.GAMING_CONSOLES,
   },
   {
+    id: 3,
     name: 'Smart TV 55-inch 4K',
     description: '55-inch 4K UHD Smart TV with HDR and built-in streaming apps.',
     unitaryPrice: 699.99,
@@ -28,6 +31,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.TELEVISIONS,
   },
   {
+    id: 4,
     name: 'iPad Air',
     description: 'Apple iPad Air with 10.9-inch Liquid Retina display and A14 Bionic chip.',
     unitaryPrice: 599.99,
@@ -36,6 +40,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.TABLETS,
   },
   {
+    id: 5,
     name: 'Ear Pads (Wireless)',
     description: 'Noise-canceling wireless ear pads with Bluetooth connectivity.',
     unitaryPrice: 79.99,
@@ -44,6 +49,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.AUDIO,
   },
   {
+    id: 6,
     name: 'Nintendo Switch OLED',
     description: 'Nintendo Switch OLED model with enhanced screen and improved speakers.',
     unitaryPrice: 349.99,
@@ -52,6 +58,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.GAMING_CONSOLES,
   },
   {
+    id: 7,
     name: 'iPhone 11',
     description: 'Apple iPhone 11 with 6.1-inch Liquid Retina display and A13 Bionic chip.',
     unitaryPrice: 399.99,
@@ -60,6 +67,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.SMARTPHONES,
   },
   {
+    id: 8,
     name: 'Mechanical Keyboard RGB',
     description: 'Mechanical gaming keyboard with customizable RGB lighting and tactile switches.',
     unitaryPrice: 129.99,
@@ -68,6 +76,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.ACCESSORIES,
   },
   {
+    id: 9,
     name: 'MacBook Air M2',
     description:
       'Apple MacBook Air with M2 chip, 13.6-inch Retina display, and all-day battery life.',
@@ -77,6 +86,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.LAPTOPS,
   },
   {
+    id: 10,
     name: 'Logitech G Pro Wireless Mouse',
     description:
       'Logitech G Pro wireless gaming mouse with HERO sensor and ultra-lightweight design.',
@@ -86,6 +96,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.ACCESSORIES,
   },
   {
+    id: 11,
     name: 'Figure Midoriya - My Hero Academia',
     description: 'Highly detailed Midoriya action figure from My Hero Academia.',
     unitaryPrice: 39.99,
@@ -94,6 +105,7 @@ export const ProductData: Product[] = [
     category: ProductCategory.COLLECTIBLES,
   },
   {
+    id: 12,
     name: 'Figure Ultraman Tiga',
     description: "Collector's edition Ultraman Tiga action figure with multiple accessories.",
     unitaryPrice: 49.99,
