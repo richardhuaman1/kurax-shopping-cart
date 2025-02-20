@@ -1,0 +1,101 @@
+:root {
+  --star-color: #f67034;
+  --text-title-color: #1b2741;
+  --text-description-color: #3f3f46;
+  --card-color: #ffffff;
+}
+
+.productCard {
+  background-color: var(--card-color);
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.125);
+}
+
+.productImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.productImage {
+  width: 15rem;
+  max-width: 100%;
+  height: auto;
+  max-height: 17.5rem;
+  object-fit: contain;
+  aspect-ratio: 6 / 7;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.productTitle {
+  font-size: var(--font-size-lg);
+  text-transform: capitalize;
+  color: var(--text-title-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.productPrice {
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.productDescription {
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--text-description-color);
+  margin-bottom: 0.5rem;
+}
+
+.productRating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.productRating > svg {
+  color: var(--star-color);
+}
+
+.productActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.addToCartButton {
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--border-radius-md);
+  border: none;
+  background-color: var(--text-title-color);
+  color: var(--card-color);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addToCartButton:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.addToCartButton:focus {
+  outline: 2px solid var(--primary-color);
+}
