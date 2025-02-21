@@ -1,4 +1,4 @@
-import { ProductGrid } from '@/components/product-grid/ProductGrid';
+import { PaginatedProductGrid } from '@/components/product-grid/PaginatedProductGrid';
 import { useGetProducts } from '@/hooks/useGetProducts';
 
 function ProductListRenderer() {
@@ -8,7 +8,7 @@ function ProductListRenderer() {
 
   if (error) return <div>Error</div>;
 
-  return <ProductGrid products={products} />;
+  return <PaginatedProductGrid products={products} itemsPerPage={5} />;
 }
 
 export function ProductList() {
