@@ -7,6 +7,8 @@ export const LocalStorageKeys = {
 
 export const MAX_PRODUCTS_PER_PURCHASE = 5;
 
+export const PRODUCTS_PER_PAGE = 5;
+
 export const routes = {
   home: '/',
   checkout: '/checkout',

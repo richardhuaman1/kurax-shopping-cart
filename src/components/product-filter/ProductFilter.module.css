@@ -1,0 +1,13 @@
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.filterContainer select {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius-md);
+  background: white;
+  cursor: pointer;
+}
