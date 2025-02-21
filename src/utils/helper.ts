@@ -1,3 +1,4 @@
+import confetti from 'canvas-confetti';
 import type { ReactNode } from 'react';
 
 import { isEmpty } from './validation';
@@ -23,4 +24,8 @@ export function ListGenerator<Type>({ items, render, separator }: GeneratorListP
 export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength) + '...';
+}
+
+export function fireConfetti() {
+  return confetti();
 }

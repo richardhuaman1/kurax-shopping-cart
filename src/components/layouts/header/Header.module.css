@@ -6,11 +6,12 @@
   gap: 0.5rem;
 }
 
-.header > p {
+.header > a {
   color: var(--primary-color);
   text-align: center;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
+  text-decoration: none;
 }
 
 .header svg {

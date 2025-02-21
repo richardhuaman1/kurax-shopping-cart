@@ -13,7 +13,7 @@ function ProductListRenderer() {
 
 export function ProductList() {
   return (
-    <section>
+    <section id="product-list">
       <ProductListRenderer />
     </section>
   );

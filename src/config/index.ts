@@ -6,3 +6,9 @@ export const LocalStorageKeys = {
 };
 
 export const MAX_PRODUCTS_PER_PURCHASE = 5;
+
+export const routes = {
+  home: '/',
+  checkout: '/checkout',
+  successPayment: '/placed-order',
+};
