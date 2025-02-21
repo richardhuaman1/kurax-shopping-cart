@@ -3,10 +3,11 @@ import type { CartItem, Product } from '@/types';
 export type CartStateType = {
   cartItems: CartItem[];
   totalItems: number;
+  subTotal: number;
 };
 
 export type CartActionsType =
-  | { type: 'ADD_TO_CART'; payload: CartItem }
+  | { type: 'ADD_TO_CART'; payload: Product }
   | { type: 'REMOVE_FROM_CART'; payload: Product['id'] }
   | { type: 'DECREASE_QUANTITY'; payload: Product['id'] }
   | { type: 'INCREASE_QUANTITY'; payload: { id: Product['id']; stock: number } }
@@ -14,7 +15,7 @@ export type CartActionsType =
   | { type: 'CLEAR_CART' };
 
 export type CartContextType = CartStateType & {
-  addToCart: (items: CartItem) => void;
+  addToCart: (product: Product) => void;
   clearCart: () => void;
   removeFromCart: (id: Product['id']) => void;
   decreaseQuantity: (id: Product['id']) => void;

@@ -1,6 +1,7 @@
 import { MAX_PRODUCTS_PER_PURCHASE } from '@/config';
 
 import type { CartActionsType, CartStateType } from './cartTypes';
+import { calculateSubTotal } from './helper';
 
 export function cartReducer(state: CartStateType, action: CartActionsType): CartStateType {
   switch (action.type) {
@@ -26,6 +27,7 @@ export function cartReducer(state: CartStateType, action: CartActionsType): Cart
         ...state,
         cartItems: updatedCart,
         totalItems: updatedCart.reduce((sum, item) => sum + item.quantity, 0),
+        subTotal: calculateSubTotal(updatedCart),
       };
     }
 
@@ -35,6 +37,7 @@ export function cartReducer(state: CartStateType, action: CartActionsType): Cart
         ...state,
         cartItems: updatedCart,
         totalItems: updatedCart.reduce((sum, item) => sum + item.quantity, 0),
+        subTotal: calculateSubTotal(updatedCart),
       };
     }
 
@@ -48,15 +51,16 @@ export function cartReducer(state: CartStateType, action: CartActionsType): Cart
       let updatedCart;
 
       if (foundItem.quantity > 1) {
-        updatedCart = state.cartItems.map(item =>
-          item.id === action.payload
-            ? {
-                ...item,
-                quantity: item.quantity - 1,
-                subTotal: (item.quantity - 1) * item.unitaryPrice,
-              }
-            : item,
-        );
+        updatedCart = state.cartItems.map(item => {
+          if (item.id === action.payload) {
+            return {
+              ...item,
+              quantity: item.quantity - 1,
+              subTotal: (item.quantity - 1) * item.unitaryPrice,
+            };
+          }
+          return item;
+        });
       } else {
         updatedCart = state.cartItems.filter(item => item.id !== action.payload);
       }
@@ -65,6 +69,7 @@ export function cartReducer(state: CartStateType, action: CartActionsType): Cart
         ...state,
         cartItems: updatedCart,
         totalItems: updatedCart.reduce((sum, item) => sum + item.quantity, 0),
+        subTotal: calculateSubTotal(updatedCart),
       };
     }
 
@@ -97,6 +102,7 @@ export function cartReducer(state: CartStateType, action: CartActionsType): Cart
         ...state,
         cartItems: updatedCart,
         totalItems: updatedCart.reduce((sum, item) => sum + item.quantity, 0),
+        subTotal: calculateSubTotal(updatedCart),
       };
     }
 
@@ -115,6 +121,7 @@ export function cartReducer(state: CartStateType, action: CartActionsType): Cart
         ...state,
         cartItems: updatedCart,
         totalItems: updatedCart.reduce((sum, item) => sum + item.quantity, 0),
+        subTotal: calculateSubTotal(updatedCart),
       };
     }
 
@@ -122,6 +129,7 @@ export function cartReducer(state: CartStateType, action: CartActionsType): Cart
       return {
         cartItems: [],
         totalItems: 0,
+        subTotal: 0,
       };
 
     default:

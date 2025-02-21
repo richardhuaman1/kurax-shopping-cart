@@ -1,6 +1,6 @@
-import type { CartItem, Product } from '@/types';
+import type { Product } from '@/types';
 
-const addToCart = (product: CartItem) =>
+const addToCart = (product: Product) =>
   ({
     type: 'ADD_TO_CART',
     payload: product,
