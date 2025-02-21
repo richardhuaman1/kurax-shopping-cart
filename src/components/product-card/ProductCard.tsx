@@ -1,6 +1,5 @@
 import { Star } from 'lucide-react';
 
-import { cn } from '@/lib/helper';
 import { useCart } from '@/stores/cart/CartContext';
 import type { Product } from '@/types';
 import { ListGenerator } from '@/utils/helper';
@@ -21,10 +20,10 @@ export function ProductCard(product: ProductCardProps) {
         <img className={styles.productImage} src={image} alt={name} />
       </div>
       <div className={styles.productDetails}>
-        <h3 className={cn(styles.productTitle, 'line-clamp line-clamp-1')}>{name}</h3>
+        <h3 className={`${styles.productTitle} line-clamp line-clamp-1`}>{name}</h3>
         <span className={styles.productPrice}>{NumberUtils.toCurrency(unitaryPrice)}</span>
       </div>
-      <p className={cn(styles.productDescription, 'line-clamp line-clamp-2')}>{description}</p>
+      <p className={`${styles.productDescription} line-clamp line-clamp-2`}>{description}</p>
       <p className={styles.currentStock}>{NumberUtils.padWithZero(stock)} items left</p>
       <div className={styles.productRating}>
         <ListGenerator
@@ -34,7 +33,6 @@ export function ProductCard(product: ProductCardProps) {
       </div>
       <div className={styles.productActions}>
         <button
-          disabled={stock === 0}
           className={isItemInCart ? styles.removeFromCartButton : styles.addToCartButton}
           onClick={isItemInCart ? () => removeFromCart(id) : () => addToCart(product)}
         >
