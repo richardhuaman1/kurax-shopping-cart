@@ -23,8 +23,8 @@ Para inicializar el proyecto, sigue los siguientes pasos:
 1. Clonar el repositorio:
 
    ```sh
-   git clone [URL_DEL_REPOSITORIO]
-   cd nombre-del-proyecto
+   git clone https://github.com/richardhuaman1/kurax-shopping-cart.git
+   cd kurax-shopping-cart
    ```
 
 2. Instalar dependencias:
