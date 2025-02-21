@@ -1,14 +1,20 @@
+import { useNavigate } from 'react-router-dom';
+
+import { routes } from '@/config';
 import { useCart } from '@/stores/cart/CartContext';
 import { ListGenerator } from '@/utils/helper';
 import { NumberUtils } from '@/utils/number';
 import { isEmpty } from '@/utils/validation';
 
+import { useCartDrawerContext } from './CartDrawer.context';
 import styles from './CartDrawerContent.module.css';
 import { CartEmpty } from './CartEmpty';
 import { CartDrawerItem } from './CartItem';
 
 export function CartDrawerContent() {
   const { cartItems, clearCart, subTotal } = useCart();
+  const { closeCart } = useCartDrawerContext();
+  const navigate = useNavigate();
 
   if (isEmpty(cartItems)) return <CartEmpty />;
 
@@ -40,7 +46,13 @@ export function CartDrawerContent() {
         <button className={styles.resetCartButton} onClick={clearCart}>
           Clear Cart
         </button>
-        <button className={styles.checkoutButton} onClick={() => {}}>
+        <button
+          className={styles.checkoutButton}
+          onClick={() => {
+            navigate(routes.checkout);
+            closeCart();
+          }}
+        >
           Proceed to checkout
         </button>
       </div>

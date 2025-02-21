@@ -1,12 +1,22 @@
+import { Route } from 'react-router-dom';
+
 import { CartDrawer } from './components/cart/CartDrawer';
 import { PrimaryLayout } from './components/layouts/PrimaryLayout';
-import { ProductList } from './sections/product-list/ProductList';
+import { RoutesWithNotFound } from './components/RoutesWithNotFound';
+import { routes } from './config';
+import { CheckoutPage } from './pages/checkout/CheckoutPage';
+import { HomePage } from './pages/HomePage';
+import { SuccessPaymentPage } from './pages/success-payment/SuccessPayment';
 
 function App() {
   return (
     <>
       <PrimaryLayout>
-        <ProductList />
+        <RoutesWithNotFound>
+          <Route path={routes.home} element={<HomePage />} />
+          <Route path={routes.checkout} element={<CheckoutPage />} />
+          <Route path={routes.successPayment} element={<SuccessPaymentPage />} />
+        </RoutesWithNotFound>
       </PrimaryLayout>
       <CartDrawer />
     </>

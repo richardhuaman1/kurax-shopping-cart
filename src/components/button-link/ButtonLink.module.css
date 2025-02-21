@@ -1,0 +1,16 @@
+.buttonLink {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  background-color: var(--text-title-color);
+  color: var(--card-color);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buttonLink:hover {
+  transform: scale(1.05);
+}
