@@ -71,7 +71,8 @@
         "prefer-template": "off",
         "@typescript-eslint/naming-convention": "off",
         "no-void": "off",
-        "jsx-a11y/label-has-associated-control": "off"
+        "jsx-a11y/label-has-associated-control": "off",
+        "@typescript-eslint/no-shadow": "off"
       }
     }
   ]

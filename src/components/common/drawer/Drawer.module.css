@@ -1,0 +1,30 @@
+.drawerCheckbox {
+  display: none;
+}
+
+.drawerCheckbox:checked ~ .drawerOverlay {
+  display: block;
+  opacity: 1;
+}
+
+.drawerCheckbox:checked ~ .drawerContainer {
+  visibility: visible;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.drawerOverlay {
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.drawerContainer {
+  position: fixed;
+  visibility: hidden;
+  background: white;
+  transition: all;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}

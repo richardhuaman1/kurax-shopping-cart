@@ -13,13 +13,17 @@ export function ProductGrid({ products }: ProductGridProps) {
     <div className={styles.productGrid}>
       <ListGenerator
         items={products}
-        render={({ id, name, description, image, unitaryPrice }) => (
+        render={({ id, name, description, image, unitaryPrice, stock, category, createdAt }) => (
           <ProductCard
             key={id}
+            id={id}
             name={name}
             description={description}
             image={image}
             unitaryPrice={unitaryPrice}
+            stock={stock}
+            category={category}
+            createdAt={createdAt}
           />
         )}
       />

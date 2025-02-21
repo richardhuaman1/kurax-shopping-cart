@@ -1,0 +1,48 @@
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.subTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.actionButton .resetCartButton {
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.actionButton .checkoutButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-semibold);
+}

@@ -3,6 +3,7 @@
 
 :root {
   --primary-color: #886CE4;
+  --danger-color: #EC003F;
 
   /* Fonts Size*/
   --font-size-xs: 0.75rem;
