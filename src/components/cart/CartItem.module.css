@@ -1,0 +1,85 @@
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.itemImage {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+}
+
+.itemDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-title-color);
+}
+
+.itemDescription {
+  font-size: 0.875rem;
+  color: var(--text-description-color);
+}
+
+.cartActions {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartActions .clearCartButton {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--cart-button-bg);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.quantityButton {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--cart-button-bg);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantityButton:hover {
+  background-color: var(--cart-button-hover-bg);
+  transform: scale(1.1);
+}
+
+.quantity {
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 2rem;
+  text-align: center;
+}

@@ -11,6 +11,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_1,
     category: ProductCategory.SMARTPHONES,
+    stock: 10,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_2,
     category: ProductCategory.GAMING_CONSOLES,
+    stock: 23,
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_3,
     category: ProductCategory.TELEVISIONS,
+    stock: 4,
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_4,
     category: ProductCategory.TABLETS,
+    stock: 9,
   },
   {
     id: 5,
@@ -47,6 +51,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_5,
     category: ProductCategory.AUDIO,
+    stock: 8,
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_6,
     category: ProductCategory.GAMING_CONSOLES,
+    stock: 3,
   },
   {
     id: 7,
@@ -65,6 +71,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_7,
     category: ProductCategory.SMARTPHONES,
+    stock: 1,
   },
   {
     id: 8,
@@ -74,6 +81,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_8,
     category: ProductCategory.ACCESSORIES,
+    stock: 4,
   },
   {
     id: 9,
@@ -84,6 +92,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_9,
     category: ProductCategory.LAPTOPS,
+    stock: 18,
   },
   {
     id: 10,
@@ -94,6 +103,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_10,
     category: ProductCategory.ACCESSORIES,
+    stock: 16,
   },
   {
     id: 11,
@@ -103,6 +113,7 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_11,
     category: ProductCategory.COLLECTIBLES,
+    stock: 10,
   },
   {
     id: 12,
@@ -112,5 +123,6 @@ export const ProductData: Product[] = [
     createdAt: new Date().toISOString(),
     image: PublicImages.PRODUCTS.PRODUCT_12,
     category: ProductCategory.COLLECTIBLES,
+    stock: 8,
   },
 ];
